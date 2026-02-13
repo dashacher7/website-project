@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$uicideboy$ | Interactive Map</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="interactive-page">
+
+<header class="site-header">
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="info.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="discography.html">Discography</a>
+    <a href="interactive.html" class="active">Tour Map</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+</header>
+
+<main>
+<h1 class="tour-title">Grey Day Tour 2025</h1>
+<p class="tour-subtitle">Click a location to see venue details</p>
+
+<section class="tour-map" style="position:relative; max-width:1200px; margin:40px auto;">
+  <img src="images/map-usa.jpg" class="map-img" style="width:100%; display:block;" alt="Tour map">
+
+<!-- FLORIDA -->
+<button class="pin" style="top:82.5%; left:82.2%;" onclick="openPopup('West Palm Beach, FL','Aug 5 – iTHINK Financial Amphitheatre')">📍</button>
+<button class="pin" style="top:80%; left:80%;" onclick="openPopup('Tampa, FL','Aug 6 – MIDFLORIDA CU Amphitheater')">📍</button>
+<!-- GEORGIA -->
+<button class="pin" style="top:73%; left:77.5%;" onclick="openPopup('Atlanta, GA','Aug 8 – Lakewood Amphitheater')">📍</button>
+<!-- NEW YORK -->
+<button class="pin" style="top:62%; left:86%;" onclick="openPopup('New York, NY','Oct 3 – Jones Beach Theater')">📍</button>
+<button class="pin" style="top:58%; left:80%;" onclick="openPopup('Darien Center, NY','Sep 28 – Darien Lake Amphitheater')">📍</button>
+<button class="pin" style="top:61%; left:86%;" onclick="openPopup('Wantagh, NY','Oct 3 – Jones Beach Theater')">📍</button>
+<!-- NEW JERSEY -->
+<button class="pin" style="top:63%; left:85.5%;" onclick="openPopup('Holmdel, NJ','Oct 4 – PNC Bank Arts Center ')">📍</button>
+<button class="pin" style="top:64%; left:85%;" onclick="openPopup('Camden, NJ','Oct 1 – Freedom Mortgage Pavilion')">📍</button>
+<!-- MASSACHUSETTS -->
+<button class="pin" style="top:59.3%; left:87%;" onclick="openPopup('Mansfield, MA','Sep 24 – Xfinity Center')">📍</button>
+<!-- CONNECTICUT -->
+<button class="pin" style="top:58%; left:87.5%;" onclick="openPopup('Norwalk, CT','Sep 25 – Norwalk Harbor Amphitheater')">📍</button>
+<!-- ONTARIO -->
+<button class="pin" style="top:59%; left:81%;" onclick="openPopup('Toronto, ON','Sep 27 – Budweiser Stage')">📍</button>
+<!-- MONTREAL -->
+<button class="pin" style="top:56%; left:85%;" onclick="openPopup('Montreal, QC','Sep 26 – Bell Centre')">📍</button>
+<!-- MICHIGAN -->
+<button class="pin" style="top:61%; left:77%;" onclick="openPopup('Detroit, MI','Sep 16 – Pine Knob Music Theatre')">📍</button>
+<!-- ILLINOIS -->
+<button class="pin" style="top:62.8%; left:73.8%;" onclick="openPopup('Chicago, IL','Aug 17 – Credit Union 1 Amphitheatre')">📍</button>
+<!-- COLORADO -->
+<button class="pin" style="top:64%; left:59%;" onclick="openPopup('Denver, CO','Aug 19 – Ball Arena')">📍</button>
+<!-- CALIFORNIA -->
+<button class="pin" style="top:68%; left:45%;" onclick="openPopup('Los Angeles, CA','Sep 5 – BMO Stadium')">📍</button>
+<button class="pin" style="top:70%; left:46%;" onclick="openPopup('Chula Vista, CA','Sep 6 – North Island Credit Union Amphitheatre')">📍</button>
+<button class="pin" style="top:63%; left:46%;" onclick="openPopup('Wheatland, CA','Sep 2 – Toyota Amphitheatre')">📍</button>
+<button class="pin" style="top:65%; left:45%;" onclick="openPopup('Mountain View, CA','Sep 3 – Shoreline Amphitheatre')">📍</button>
+<!-- NEVADA -->
+<button class="pin" style="top:66%; left:50%;" onclick="openPopup('Las Vegas, NV','Aug 22 – T-Mobile Arena')">📍</button>
+<!-- ARIZONA -->
+<button class="pin" style="top:71%; left:55%;" onclick="openPopup('Phoenix, AZ','Sep 8 – Talking Stick Resort Amphitheatre')">📍</button>
+<!-- UTAH -->
+<button class="pin" style="top:61%; left:56%;" onclick="openPopup('Salt Lake City, UT','Aug 23 – Utah First CU Amphitheatre')">📍</button>
+<!-- IDAHO -->
+<button class="pin" style="top:56%; left:54%;" onclick="openPopup('Nampa, ID','Aug 24 – Ford Idaho Center Amphitheatre')">📍</button>
+<!-- WASHINGTON -->
+<button class="pin" style="top:50%; left:50%;" onclick="openPopup('Ridgefield, WA','Aug 26 – Cascades Amphitheater')">📍</button>
+<button class="pin" style="top:49%; left:51%;" onclick="openPopup('Auburn, WA','Aug 27 – White River Amphitheater')">📍</button>
+<!-- TEXAS -->
+<button class="pin" style="top:73%; left:61%;" onclick="openPopup('Austin, TX','Sep 12 – Germania Insurance Amphitheater')">📍</button>
+<button class="pin" style="top:71%; left:62%;" onclick="openPopup('Dallas, TX','Sep 13 – Dos Equis Pavilion')">📍</button>
+<button class="pin" style="top:75%; left:64%;" onclick="openPopup('Houston, TX','Oct 10 – Toyota Center')">📍</button>
+<!-- LOUISIANA -->
+<button class="pin" style="top:76%; left:66%;" onclick="openPopup('New Orleans, LA','Oct 11 – Smoothie King Center')">📍</button>
+</section>
+
+<section class="tour-dates">
+  <h2>Full Grey Day 2025 Tour Dates</h2>
+  <p class="tour-dates-sub">All stops from August – October</p>
+
+  <div class="dates-grid">
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">05</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">West Palm Beach, FL</div>
+        <div class="date-venue">iTHINK Financial Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">06</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Tampa, FL</div>
+        <div class="date-venue">MIDFLORIDA Credit Union Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">08</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Atlanta, GA</div>
+        <div class="date-venue">Lakewood Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">09</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Nashville, TN</div>
+        <div class="date-venue">Bridgestone Arena</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">12</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Maryland Heights, MO</div>
+        <div class="date-venue">Hollywood Casino Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">13</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Noblesville, IN</div>
+        <div class="date-venue">Ruoff Music Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">15</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Somerset, WI</div>
+        <div class="date-venue">Somerset Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">16</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Milwaukee, WI</div>
+        <div class="date-venue">American Family Insurance Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">17</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Tinley Park, IL</div>
+        <div class="date-venue">Credit 1 Union Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">19</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Denver, CO</div>
+        <div class="date-venue">Ball Arena</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">22</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Las Vegas, NV</div>
+        <div class="date-venue">T-Mobile Arena</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">23</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Salt Lake City, UT</div>
+        <div class="date-venue">Utah First Credit Union Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">24</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Nampa, ID</div>
+        <div class="date-venue">Ford Idaho Center Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">26</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Ridgefield, WA</div>
+        <div class="date-venue">Cascades Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">27</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Auburn, WA</div>
+        <div class="date-venue">White River Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">AUG</span>
+        <span class="date-day">29</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Vancouver, BC</div>
+        <div class="date-venue">Rogers Arena</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">02</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Wheatland, CA</div>
+        <div class="date-venue">Toyota Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">03</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Mountain View, CA</div>
+        <div class="date-venue">Shoreline Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">05</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Los Angeles, CA</div>
+        <div class="date-venue">BMO Stadium</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">06</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Chula Vista, CA</div>
+        <div class="date-venue">North Island Credit Union Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">08</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Phoenix, AZ</div>
+        <div class="date-venue">Talking Stick Resort Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">10</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Albuquerque, NM</div>
+        <div class="date-venue">Isleta Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">12</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Austin, TX</div>
+        <div class="date-venue">Germania Insurance Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">13</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Dallas, TX</div>
+        <div class="date-venue">Dos Equis Pavilion</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">14</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Tulsa, OK</div>
+        <div class="date-venue">BOK Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">16</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Clarkston, MI</div>
+        <div class="date-venue">Pine Knob Music Theatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">17</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Cincinnati, OH</div>
+        <div class="date-venue">Riverbend Music Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">19</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Bristow, VA</div>
+        <div class="date-venue">Jiffy Lube Live</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">20</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Burgettstown, PA</div>
+        <div class="date-venue">The Pavilion at Star Lake</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">21</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Louisville, KY</div>
+        <div class="date-venue">Louder than Life</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">23</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Hartford, CT</div>
+        <div class="date-venue">The Xfinity Theatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">24</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Mansfield, MA</div>
+        <div class="date-venue">Xfinity Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">26</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Montreal, QC</div>
+        <div class="date-venue">Bell Centre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">27</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Toronto, ON</div>
+        <div class="date-venue">Budweiser Stage</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">28</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Darien Center, NY</div>
+        <div class="date-venue">Darien Lake Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">SEP</span>
+        <span class="date-day">30</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Holmdel, NJ</div>
+        <div class="date-venue">PNC Bank Arts Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">01</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Camden, NJ</div>
+        <div class="date-venue">Freedom Mortgage Pavilion</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">03</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Wantagh, NY</div>
+        <div class="date-venue">Northwell at Jones Beach Theater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">04</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Virginia Beach, VA</div>
+        <div class="date-venue">Veterans United Home Loans Amphitheater</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">05</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Raleigh, NC</div>
+        <div class="date-venue">Coastal Credit Union Music Park</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">07</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Charlotte, NC</div>
+        <div class="date-venue">PNC Music Pavilion</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">08</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Simpsonville, SC</div>
+        <div class="date-venue">CCNB Amphitheatre</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">10</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">Houston, TX</div>
+        <div class="date-venue">Toyota Center</div>
+      </div>
+    </div>
+
+    <div class="date-card">
+      <div class="date-left">
+        <span class="date-month">OCT</span>
+        <span class="date-day">11</span>
+      </div>
+      <div class="date-right">
+        <div class="date-city">New Orleans, LA</div>
+        <div class="date-venue">Smoothie King Center</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="map-popup" id="popup" style="display:none;">
+  <div>
+    <h2 id="popupCity"></h2>
+    <p id="popupInfo"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+
+</main>
+
+<footer class="site-footer">
+  <img src="images/g59.png" alt="G59 Records Logo" class="g59-logo">
+</footer>
+
+<script>
+  function openPopup(city, info) {
+    document.getElementById("popupCity").textContent = city;
+    document.getElementById("popupInfo").textContent = info;
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+</script>
+
+
+
+</body>
+</html>

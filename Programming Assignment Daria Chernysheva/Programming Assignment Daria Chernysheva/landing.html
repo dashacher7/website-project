@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$uicideboy$ | Enter</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<footer class="site-footer">
+  <img src="images/g59.png" alt="G59 Records Logo" class="g59-logo" />
+</footer>
+
+<body class="landing">
+
+  <div class="enter-screen">
+    <h1 id="enter-title">$𝖚𝖎𝖈𝖎𝖉𝖊𝖇𝖔𝖞$</h1>
+  </div>
+
+<script>
+  const title = document.getElementById('enter-title');
+
+  title.addEventListener('click', () => {
+
+    localStorage.setItem("clickedEnter", "true");
+
+    document.body.classList.add('fade-out');
+
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1000);
+  });
+</script>

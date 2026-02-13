@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$uicideboy$ | Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="feedback-page">
+  <header class="site-header">
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="info.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="discography.html">Discography</a>
+      <a href="interactive.html">Tour Map</a>
+      <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="feedback-wrap">
+    <h1>Feedback</h1>
+    <p class="muted">Leave a thought, a favorite song, or what you like about their music and the Grey Day Tour.</p>
+
+    <form id="feedbackForm" class="feedback-form" autocomplete="off">
+      <input id="name" type="text" maxlength="30" placeholder="Your name (optional)" /> 
+      <textarea id="message" maxlength="280" placeholder="Write your comment… (max 280 chars)" required></textarea>
+
+      <div class="feedback-actions">
+        <button type="submit" class="btn">Post</button>
+        <button type="button" id="clearAll" class="btn btn-ghost">Clear all</button>
+      </div>
+
+      <p class="tiny muted">Note: comments save only on this device (no login/database).</p>
+    </form>
+
+    <section class="comments">
+      <h2>Comments</h2>
+      <div id="commentsList" class="comments-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="images/g59.png" alt="G59 Records Logo" class="g59-logo" />
+  </footer>
+
+  <script>
+    const KEY = "sb_comments_v1";
+
+    const form = document.getElementById("feedbackForm");
+    const nameInput = document.getElementById("name");
+    const msgInput = document.getElementById("message");
+    const list = document.getElementById("commentsList");
+    const clearAllBtn = document.getElementById("clearAll");
+
+    function loadComments() {
+      try {
+        return JSON.parse(localStorage.getItem(KEY)) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveComments(comments) {
+      localStorage.setItem(KEY, JSON.stringify(comments));
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, (m) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      }[m]));
+    }
+
+    function render() {
+      const comments = loadComments();
+      list.innerHTML = "";
+
+      if (comments.length === 0) {
+        list.innerHTML = `<p class="muted">No comments yet. Be the first.</p>`;
+        return;
+      }
+
+      comments.slice().reverse().forEach((c, idxFromEnd) => {
+        const idx = comments.length - 1 - idxFromEnd;
+
+        const card = document.createElement("div");
+        card.className = "comment-card";
+        card.innerHTML = `
+          <div class="comment-top">
+            <strong class="comment-name">${escapeHtml(c.name || "Anonymous")}</strong>
+            <span class="comment-date">${escapeHtml(c.date)}</span>
+          </div>
+          <p class="comment-text">${escapeHtml(c.text)}</p>
+          <button class="comment-delete" type="button" data-idx="${idx}">Delete</button>
+        `;
+        list.appendChild(card);
+      });
+
+      list.querySelectorAll(".comment-delete").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const comments = loadComments();
+          const i = Number(btn.dataset.idx);
+          comments.splice(i, 1);
+          saveComments(comments);
+          render();
+        });
+      });
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const text = msgInput.value.trim();
+
+      if (!text) return;
+
+      const comments = loadComments();
+      comments.push({
+        name,
+        text,
+        date: new Date().toLocaleString()
+      });
+
+      saveComments(comments);
+      msgInput.value = "";
+      render();
+    });
+
+    clearAllBtn.addEventListener("click", () => {
+      localStorage.removeItem(KEY);
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
